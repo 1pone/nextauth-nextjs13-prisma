@@ -8,7 +8,9 @@ export const User = () => {
   return (
     <>
       <h1>Client Session</h1>
-      <pre>{JSON.stringify(session)}</pre>
+      <p style={{ maxWidth: "500px", wordBreak: "break-word" }}>
+        {JSON.stringify(session)}
+      </p>
     </>
   );
 };

@@ -28,7 +28,9 @@ export default async function Home() {
         <ProfileButton />
 
         <h1>Server Session</h1>
-        <pre>{JSON.stringify(session)}</pre>
+        <p style={{ maxWidth: "500px", wordBreak: "break-word" }}>
+          {JSON.stringify(session)}
+        </p>
 
         <User />
       </div>

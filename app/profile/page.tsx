@@ -1,7 +1,3 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
-import { redirect } from "next/navigation";
-
 type User = {
   id: number;
   name: string;
@@ -9,12 +5,6 @@ type User = {
 };
 
 export default async function Profile() {
-  // const session = await getServerSession(authOptions);
-  //
-  // if (!session) {
-  //   redirect("/api/auth/signin");
-  // }
-
   const users: User[] = await fetch(
     "https://jsonplaceholder.typicode.com/users",
   ).then((res) => res.json());
